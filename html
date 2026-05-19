@@ -1,12 +1,184 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Ice - Heladería</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background:#fff0f5;
+            color:#333;
+        }
+
+        header{
+            background:linear-gradient(90deg,#ff69b4,#ffb6c1);
+            padding:20px;
+            text-align:center;
+            color:white;
+        }
+
+        nav{
+            margin-top:10px;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:0 15px;
+            font-weight:bold;
+        }
+
+        .hero{
+            height:400px;
+            background:url('https://images.unsplash.com/photo-1563805042-7684c019e1cb') center/cover;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            color:white;
+            text-shadow:2px 2px 5px black;
+            font-size:40px;
+            font-weight:bold;
+        }
+
+        .container{
+            width:90%;
+            margin:auto;
+            padding:40px 0;
+        }
+
+        h2{
+            text-align:center;
+            margin-bottom:30px;
+            color:#ff1493;
+        }
+
+        .productos{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+        }
+
+        .card{
+            background:white;
+            border-radius:15px;
+            overflow:hidden;
+            box-shadow:0 4px 10px rgba(0,0,0,0.2);
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:scale(1.05);
+        }
+
+        .card img{
+            width:100%;
+            height:220px;
+            object-fit:cover;
+        }
+
+        .card-content{
+            padding:20px;
+            text-align:center;
+        }
+
+        .precio{
+            color:#ff1493;
+            font-size:22px;
+            font-weight:bold;
+            margin:10px 0;
+        }
+
+        button{
+            background:#ff1493;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            border-radius:10px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+            background:#ff69b4;
+        }
+
+        footer{
+            background:#ff69b4;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:40px;
+        }
+    </style>
+</head>
+
 <body>
 
-<h3 style="color:Tomato;">Hello World</h3>
+<header>
+    <h1>🍦 Sweet Ice Heladería</h1>
 
-<p style="color:DodgerBlue;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Sabores</a>
+        <a href="#">Promociones</a>
+        <a href="#">Contacto</a>
+    </nav>
+</header>
 
-<p style="color:MediumSeaGreen;">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+<section class="hero">
+    ¡Los mejores helados del mundo!
+</section>
+
+<div class="container">
+
+    <h2>Nuestros Helados</h2>
+
+    <div class="productos">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371" alt="">
+            <div class="card-content">
+                <h3>Helado de Fresa</h3>
+                <p>Delicioso helado artesanal sabor fresa.</p>
+                <div class="precio">$3.00</div>
+                <button>Comprar</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e" alt="">
+            <div class="card-content">
+                <h3>Helado de Chocolate</h3>
+                <p>Cremoso helado de chocolate premium.</p>
+                <div class="precio">$4.00</div>
+                <button>Comprar</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1517093157656-b9eccef91cb1" alt="">
+            <div class="card-content">
+                <h3>Helado de Vainilla</h3>
+                <p>Suave y dulce sabor clásico de vainilla.</p>
+                <div class="precio">$2.50</div>
+                <button>Comprar</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Sweet Ice Heladería | Todos los derechos reservados</p>
+</footer>
 
 </body>
 </html>
