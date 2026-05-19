@@ -1,517 +1,667 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sweet Ice - Heladería Premium</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>Sweet Ice | Heladería Premium</title>
 
-    <style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+<style>
 
-        body{
-            background:#f8f8f8;
-            color:#333;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
 
-        /* HEADER */
+body{
+    background:#f5f5f5;
+    overflow-x:hidden;
+}
 
-        header{
-            background:white;
-            box-shadow:0 2px 10px rgba(0,0,0,0.1);
-            position:sticky;
-            top:0;
-            z-index:1000;
-        }
+/* NAVBAR */
 
-        .navbar{
-            width:90%;
-            margin:auto;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            padding:18px 0;
-        }
+header{
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
 
-        .logo{
-            font-size:32px;
-            font-weight:bold;
-            color:#ff4d88;
-        }
+.navbar{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
 
-        .logo span{
-            color:#333;
-        }
+.logo{
+    font-size:35px;
+    font-weight:bold;
+    color:#ff4081;
+}
 
-        nav a{
-            text-decoration:none;
-            margin:0 15px;
-            color:#333;
-            font-weight:600;
-            transition:0.3s;
-        }
+.logo span{
+    color:#222;
+}
 
-        nav a:hover{
-            color:#ff4d88;
-        }
+nav a{
+    text-decoration:none;
+    color:#333;
+    margin:0 15px;
+    font-weight:600;
+    transition:0.3s;
+}
 
-        /* HERO */
+nav a:hover{
+    color:#ff4081;
+}
 
-        .hero{
-            height:90vh;
-            background:
-            linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-            url('https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=1600&auto=format&fit=crop');
-            background-size:cover;
-            background-position:center;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            color:white;
-            padding:20px;
-        }
+/* HERO */
 
-        .hero-content h1{
-            font-size:70px;
-            margin-bottom:20px;
-        }
+.hero{
+    height:90vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+    url('https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=1600&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
 
-        .hero-content p{
-            font-size:22px;
-            margin-bottom:30px;
-        }
+.hero-content h1{
+    font-size:75px;
+    margin-bottom:20px;
+}
 
-        .btn{
-            background:#ff4d88;
-            color:white;
-            padding:15px 35px;
-            border:none;
-            border-radius:40px;
-            font-size:18px;
-            cursor:pointer;
-            transition:0.3s;
-        }
+.hero-content p{
+    font-size:24px;
+    margin-bottom:30px;
+}
 
-        .btn:hover{
-            background:#ff1f68;
-            transform:scale(1.05);
-        }
+.hero button{
+    padding:15px 35px;
+    border:none;
+    border-radius:40px;
+    background:#ff4081;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
 
-        /* INFO */
+.hero button:hover{
+    background:#e91e63;
+    transform:scale(1.05);
+}
 
-        .info{
-            width:90%;
-            margin:60px auto;
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-            gap:25px;
-        }
+/* PRODUCTOS */
 
-        .info-box{
-            background:white;
-            padding:30px;
-            text-align:center;
-            border-radius:20px;
-            box-shadow:0 4px 15px rgba(0,0,0,0.1);
-            transition:0.3s;
-        }
+.container{
+    width:90%;
+    margin:auto;
+    padding:80px 0;
+}
 
-        .info-box:hover{
-            transform:translateY(-10px);
-        }
+.titulo{
+    text-align:center;
+    font-size:50px;
+    margin-bottom:50px;
+    color:#ff4081;
+}
 
-        .info-box i{
-            font-size:45px;
-            color:#ff4d88;
-            margin-bottom:15px;
-        }
+.productos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
 
-        .info-box h3{
-            margin-bottom:10px;
-        }
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    transition:0.4s;
+    position:relative;
+}
 
-        /* PRODUCTOS */
+.card:hover{
+    transform:translateY(-10px);
+}
 
-        .container{
-            width:90%;
-            margin:auto;
-            padding:40px 0;
-        }
+.card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+}
 
-        .titulo{
-            text-align:center;
-            font-size:45px;
-            margin-bottom:50px;
-            color:#ff4d88;
-        }
+.etiqueta{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:#ff4081;
+    color:white;
+    padding:8px 15px;
+    border-radius:20px;
+    font-size:14px;
+}
 
-        .productos{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-            gap:30px;
-        }
+.card-content{
+    padding:25px;
+    text-align:center;
+}
 
-        .card{
-            background:white;
-            border-radius:20px;
-            overflow:hidden;
-            box-shadow:0 5px 20px rgba(0,0,0,0.1);
-            transition:0.4s;
-            position:relative;
-        }
+.card-content h3{
+    font-size:28px;
+    margin-bottom:10px;
+}
 
-        .card:hover{
-            transform:translateY(-12px);
-        }
+.card-content p{
+    color:#666;
+    margin-bottom:15px;
+}
 
-        .card img{
-            width:100%;
-            height:260px;
-            object-fit:cover;
-        }
+.precio{
+    color:#ff4081;
+    font-size:30px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
 
-        .etiqueta{
-            position:absolute;
-            top:15px;
-            left:15px;
-            background:#ff4d88;
-            color:white;
-            padding:8px 15px;
-            border-radius:20px;
-            font-size:14px;
-        }
+.botones{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+}
 
-        .card-content{
-            padding:25px;
-            text-align:center;
-        }
+.card button{
+    border:none;
+    padding:12px 18px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.3s;
+    font-size:15px;
+}
 
-        .card-content h3{
-            margin-bottom:10px;
-            font-size:28px;
-        }
+.comprar{
+    background:#222;
+    color:white;
+}
 
-        .card-content p{
-            color:#666;
-            margin-bottom:15px;
-        }
+.comprar:hover{
+    background:#ff4081;
+}
 
-        .precio{
-            font-size:30px;
-            color:#ff4d88;
-            font-weight:bold;
-            margin-bottom:15px;
-        }
+.detalles{
+    background:#eee;
+}
 
-        .comprar{
-            background:#333;
-            color:white;
-            border:none;
-            padding:12px 25px;
-            border-radius:30px;
-            cursor:pointer;
-            transition:0.3s;
-            font-size:16px;
-        }
+.detalles:hover{
+    background:#ddd;
+}
 
-        .comprar:hover{
-            background:#ff4d88;
-        }
+/* CARRITO */
 
-        /* PROMOCION */
+.carrito{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#ff4081;
+    color:white;
+    padding:18px 22px;
+    border-radius:50px;
+    cursor:pointer;
+    box-shadow:0 4px 15px rgba(0,0,0,0.3);
+    z-index:1000;
+    transition:0.3s;
+}
 
-        .promo{
-            margin-top:80px;
-            background:
-            linear-gradient(rgba(255,77,136,0.8), rgba(255,77,136,0.8)),
-            url('https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?q=80&w=1600&auto=format&fit=crop');
-            background-size:cover;
-            background-position:center;
-            padding:80px 20px;
-            text-align:center;
-            color:white;
-            border-radius:30px;
-        }
+.carrito:hover{
+    transform:scale(1.1);
+}
 
-        .promo h2{
-            font-size:50px;
-            margin-bottom:20px;
-        }
+/* MODAL */
 
-        .promo p{
-            font-size:22px;
-            margin-bottom:30px;
-        }
+.modal{
+    display:none;
+    position:fixed;
+    z-index:2000;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+}
 
-        /* FOOTER */
+.modal-content{
+    background:white;
+    width:90%;
+    max-width:500px;
+    margin:8% auto;
+    border-radius:20px;
+    overflow:hidden;
+    animation:aparecer 0.4s;
+}
 
-        footer{
-            margin-top:80px;
-            background:#222;
-            color:white;
-            padding:50px 20px;
-        }
+@keyframes aparecer{
+    from{
+        transform:scale(0.7);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
 
-        .footer-content{
-            width:90%;
-            margin:auto;
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-            gap:30px;
-        }
+.modal img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
 
-        footer h3{
-            margin-bottom:15px;
-            color:#ff4d88;
-        }
+.modal-body{
+    padding:25px;
+    text-align:center;
+}
 
-        footer p{
-            margin:8px 0;
-            color:#ccc;
-        }
+.modal-body h2{
+    margin-bottom:15px;
+}
 
-        .social i{
-            margin-right:15px;
-            font-size:22px;
-            cursor:pointer;
-            transition:0.3s;
-        }
+.modal-body p{
+    margin-bottom:20px;
+    color:#666;
+}
 
-        .social i:hover{
-            color:#ff4d88;
-        }
+.cerrar{
+    position:absolute;
+    right:20px;
+    top:15px;
+    font-size:30px;
+    cursor:pointer;
+    color:white;
+}
 
-        .copy{
-            text-align:center;
-            margin-top:30px;
-            color:#aaa;
-        }
+/* FOOTER */
 
-        @media(max-width:768px){
+footer{
+    background:#222;
+    color:white;
+    padding:60px 20px;
+}
 
-            .navbar{
-                flex-direction:column;
-            }
+.footer-content{
+    width:90%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
 
-            nav{
-                margin-top:15px;
-            }
+footer h3{
+    margin-bottom:15px;
+    color:#ff4081;
+}
 
-            .hero-content h1{
-                font-size:45px;
-            }
+footer p{
+    margin:8px 0;
+    color:#ccc;
+}
 
-            .hero-content p{
-                font-size:18px;
-            }
-        }
+.social i{
+    margin-right:15px;
+    font-size:22px;
+    cursor:pointer;
+    transition:0.3s;
+}
 
-    </style>
+.social i:hover{
+    color:#ff4081;
+}
+
+.copy{
+    text-align:center;
+    margin-top:30px;
+    color:#aaa;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+    }
+
+    nav{
+        margin-top:15px;
+    }
+
+    .hero-content h1{
+        font-size:45px;
+    }
+
+    .hero-content p{
+        font-size:18px;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
 
-    <div class="navbar">
+<div class="navbar">
 
-        <div class="logo">
-            Sweet <span>Ice</span>
-        </div>
+<div class="logo">
+Sweet <span>Ice</span>
+</div>
 
-        <nav>
-            <a href="#">Inicio</a>
-            <a href="#">Helados</a>
-            <a href="#">Promociones</a>
-            <a href="#">Nosotros</a>
-            <a href="#">Contacto</a>
-        </nav>
+<nav>
+<a href="#">Inicio</a>
+<a href="#">Productos</a>
+<a href="#">Promociones</a>
+<a href="#">Nosotros</a>
+<a href="#">Contacto</a>
+</nav>
 
-    </div>
+</div>
 
 </header>
 
 <section class="hero">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <h1>Helados Artesanales Premium</h1>
+<h1>Helados Premium</h1>
 
-        <p>
-            Descubre sabores únicos preparados con ingredientes frescos y naturales.
-        </p>
+<p>
+Disfruta sabores únicos y artesanales preparados con ingredientes naturales.
+</p>
 
-        <button class="btn">Comprar Ahora</button>
+<button onclick="mostrarMensaje()">
+Comprar Ahora
+</button>
 
-    </div>
-
-</section>
-
-<section class="info">
-
-    <div class="info-box">
-        <i class="fa-solid fa-ice-cream"></i>
-        <h3>Sabores Exclusivos</h3>
-        <p>Más de 50 sabores artesanales disponibles.</p>
-    </div>
-
-    <div class="info-box">
-        <i class="fa-solid fa-truck"></i>
-        <h3>Entrega Rápida</h3>
-        <p>Recibe tus pedidos en minutos.</p>
-    </div>
-
-    <div class="info-box">
-        <i class="fa-solid fa-star"></i>
-        <h3>Calidad Premium</h3>
-        <p>Ingredientes frescos y de alta calidad.</p>
-    </div>
+</div>
 
 </section>
 
 <div class="container">
 
-    <h2 class="titulo">Nuestros Productos</h2>
+<h2 class="titulo">Nuestros Helados</h2>
 
-    <div class="productos">
+<div class="productos">
 
-        <div class="card">
+<!-- PRODUCTO 1 -->
 
-            <div class="etiqueta">Popular</div>
+<div class="card">
 
-            <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?q=80&w=1000&auto=format&fit=crop">
+<div class="etiqueta">Popular</div>
 
-            <div class="card-content">
+<img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?q=80&w=1000&auto=format&fit=crop">
 
-                <h3>Helado de Fresa</h3>
+<div class="card-content">
 
-                <p>Helado artesanal con fresas naturales.</p>
+<h3>Helado de Fresa</h3>
 
-                <div class="precio">$3.99</div>
+<p>
+Helado artesanal elaborado con fresas naturales y crema premium.
+</p>
 
-                <button class="comprar">Agregar al carrito</button>
+<div class="precio">$3.99</div>
 
-            </div>
+<div class="botones">
 
-        </div>
+<button class="comprar"
+onclick="agregarCarrito('Helado de Fresa')">
+Agregar
+</button>
 
-        <div class="card">
+<button class="detalles"
+onclick="abrirModal(
+'Helado de Fresa',
+'Helado premium con fresas naturales y sabor artesanal.',
+'https://images.unsplash.com/photo-1570197788417-0e82375c9371?q=80&w=1000&auto=format&fit=crop'
+)">
+Detalles
+</button>
 
-            <div class="etiqueta">Nuevo</div>
+</div>
 
-            <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?q=80&w=1000&auto=format&fit=crop">
+</div>
 
-            <div class="card-content">
+</div>
 
-                <h3>Chocolate Supreme</h3>
+<!-- PRODUCTO 2 -->
 
-                <p>Cremoso helado premium de chocolate.</p>
+<div class="card">
 
-                <div class="precio">$4.50</div>
+<div class="etiqueta">Nuevo</div>
 
-                <button class="comprar">Agregar al carrito</button>
+<img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?q=80&w=1000&auto=format&fit=crop">
 
-            </div>
+<div class="card-content">
 
-        </div>
+<h3>Chocolate Supreme</h3>
 
-        <div class="card">
+<p>
+Cremoso helado premium con chocolate importado.
+</p>
 
-            <div class="etiqueta">Top Ventas</div>
+<div class="precio">$4.50</div>
 
-            <img src="https://images.unsplash.com/photo-1517093157656-b9eccef91cb1?q=80&w=1000&auto=format&fit=crop">
+<div class="botones">
 
-            <div class="card-content">
+<button class="comprar"
+onclick="agregarCarrito('Chocolate Supreme')">
+Agregar
+</button>
 
-                <h3>Vainilla Clásica</h3>
+<button class="detalles"
+onclick="abrirModal(
+'Chocolate Supreme',
+'Chocolate premium con textura suave y cremosa.',
+'https://images.unsplash.com/photo-1560008581-09826d1de69e?q=80&w=1000&auto=format&fit=crop'
+)">
+Detalles
+</button>
 
-                <p>Delicioso sabor suave y tradicional.</p>
+</div>
 
-                <div class="precio">$2.99</div>
+</div>
 
-                <button class="comprar">Agregar al carrito</button>
+</div>
 
-            </div>
+<!-- PRODUCTO 3 -->
 
-        </div>
+<div class="card">
 
-        <div class="card">
+<div class="etiqueta">Top</div>
 
-            <div class="etiqueta">Especial</div>
+<img src="https://images.unsplash.com/photo-1517093157656-b9eccef91cb1?q=80&w=1000&auto=format&fit=crop">
 
-            <img src="https://images.unsplash.com/photo-1488900128323-21503983a07e?q=80&w=1000&auto=format&fit=crop">
+<div class="card-content">
 
-            <div class="card-content">
+<h3>Vainilla Clásica</h3>
 
-                <h3>Helado Tropical</h3>
+<p>
+Sabor suave y tradicional preparado artesanalmente.
+</p>
 
-                <p>Combinación de frutas tropicales frescas.</p>
+<div class="precio">$2.99</div>
 
-                <div class="precio">$5.20</div>
+<div class="botones">
 
-                <button class="comprar">Agregar al carrito</button>
+<button class="comprar"
+onclick="agregarCarrito('Vainilla Clásica')">
+Agregar
+</button>
 
-            </div>
+<button class="detalles"
+onclick="abrirModal(
+'Vainilla Clásica',
+'Sabor tradicional con vainilla natural premium.',
+'https://images.unsplash.com/photo-1517093157656-b9eccef91cb1?q=80&w=1000&auto=format&fit=crop'
+)">
+Detalles
+</button>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
-    <div class="promo">
+</div>
 
-        <h2>2x1 Todos los Viernes</h2>
+</div>
 
-        <p>
-            Aprovecha nuestras promociones especiales y disfruta más helados.
-        </p>
+</div>
 
-        <button class="btn">Ver Promociones</button>
+<!-- CARRITO -->
 
-    </div>
+<div class="carrito" onclick="verCarrito()">
+🛒 Carrito (<span id="contador">0</span>)
+</div>
+
+<!-- MODAL -->
+
+<div class="modal" id="modal">
+
+<span class="cerrar" onclick="cerrarModal()">
+&times;
+</span>
+
+<div class="modal-content">
+
+<img id="modal-img">
+
+<div class="modal-body">
+
+<h2 id="modal-title"></h2>
+
+<p id="modal-desc"></p>
+
+<button class="comprar"
+onclick="cerrarModal()">
+Cerrar
+</button>
+
+</div>
+
+</div>
 
 </div>
 
 <footer>
 
-    <div class="footer-content">
+<div class="footer-content">
 
-        <div>
-            <h3>Sweet Ice</h3>
-            <p>Heladería premium con sabores únicos y artesanales.</p>
-        </div>
+<div>
 
-        <div>
-            <h3>Contacto</h3>
-            <p>📍 Macas - Ecuador</p>
-            <p>📞 0983745918</p>
-            <p>✉ sweetice@gmail.com</p>
-        </div>
+<h3>Sweet Ice</h3>
 
-        <div>
-            <h3>Redes Sociales</h3>
+<p>
+Heladería premium especializada en sabores artesanales.
+</p>
 
-            <div class="social">
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-tiktok"></i>
-            </div>
-        </div>
+</div>
 
-    </div>
+<div>
 
-    <div class="copy">
-        © 2026 Sweet Ice | Todos los derechos reservados
-    </div>
+<h3>Contacto</h3>
+
+<p>📍 Macas - Ecuador</p>
+<p>📞 0983745918</p>
+<p>✉ sweetice@gmail.com</p>
+
+</div>
+
+<div>
+
+<h3>Redes Sociales</h3>
+
+<div class="social">
+
+<i class="fa-brands fa-facebook"></i>
+<i class="fa-brands fa-instagram"></i>
+<i class="fa-brands fa-tiktok"></i>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="copy">
+© 2026 Sweet Ice | Todos los derechos reservados
+</div>
 
 </footer>
+
+<script>
+
+let contador = 0;
+
+function agregarCarrito(producto){
+
+    contador++;
+
+    document.getElementById("contador").innerHTML = contador;
+
+    alert(producto + " agregado al carrito");
+}
+
+function verCarrito(){
+
+    alert("Tienes " + contador + " productos en el carrito");
+}
+
+function mostrarMensaje(){
+
+    alert("Bienvenido a Sweet Ice 🍦");
+}
+
+function abrirModal(titulo, descripcion, imagen){
+
+    document.getElementById("modal").style.display = "block";
+
+    document.getElementById("modal-title").innerHTML = titulo;
+
+    document.getElementById("modal-desc").innerHTML = descripcion;
+
+    document.getElementById("modal-img").src = imagen;
+}
+
+function cerrarModal(){
+
+    document.getElementById("modal").style.display = "none";
+}
+
+window.onclick = function(event){
+
+    let modal = document.getElementById("modal");
+
+    if(event.target == modal){
+
+        modal.style.display = "none";
+    }
+}
+
+</script>
 
 </body>
 </html>
